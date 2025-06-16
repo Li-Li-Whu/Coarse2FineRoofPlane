@@ -1,24 +1,23 @@
 # Coarse2FineRoofPlane
-This is the C++ implementation of the following manuscript:
+This is the C++ implementation of the following publication:
 > Coarse2FineRoofPlane: A Coarse-to-fine Boundary Relabeling Approach for Roof Plane Segmentation
 >
 > Guozheng Xu, Siyuan You, Ke Liu, Li Li, Jian Yao
 >
-This manuscript has been accepted by GRSL Journal.
+This manuscript has been accepted by IEEE GRSL Journal.
 
 ## Introduction
-Coarse2FineRoofPlane is a c++ library for roof plane segmentation using a coarse-to-fine boundary relabeling approach.
-See the complete [documentation](https://doi.org/10.1109/LGRS.2025.3577989) on GRSL.
+Coarse2FineRoofPlane is a C++ library for roof plane segmentation using a coarse-to-fine boundary relabeling approach. Here is the link of the paper: https://doi.org/10.1109/LGRS.2025.3577989.
 
 ## Dependency
-Before use, please download and install the required dependency libraries:
+Please download and install the required dependency libraries before compiling the code:
 ```shell script
 eigen3 (3.4.0)
 [boost](https://github.com/boostorg/boost) (1.80.0  program_options filesystem graph system)
 [libigl](https://github.com/libigl/libigl) (2.5.0)
 [pcl](https://github.com/PointCloudLibrary/pcl) (1.13.1) 
 ``` 
-You can install eigen3 pcl boost by vcpkg:
+You can install eigen3 pcl boost using vcpkg:
 ```shell script
 #install vcpkg
 git clone https://github.com/microsoft/vcpkg.git
@@ -30,7 +29,7 @@ cd vcpkg
 ./vcpkg install eigen3
 ./vcpkg install pcl
 ``` 
-Libigl is a header-only library, which has download in 'include' directory.
+Libigl is a header-only library, which has downloaded in 'include' directory.
 
 ## Usage
 ```shell script
@@ -47,14 +46,18 @@ options:
 
 ## Test
 Upon downloading the code, the test data has been preconfigured and stored in the 'data' directory, ensuring immediate readiness for testing. 
-
-
+A example of Using Coarse2FineRoofPlane:
+```shell script
+Coarse2FineRoofPlane --i ./data/000206.txt --o ./resData/ 
+```
 ## Citation
 
 If you find our work useful for your research, please consider citing our paper.
 > Coarse2FineRoofPlane: A Coarse-to-fine Boundary Relabeling Approach for Roof Plane Segmentation
 >
 > Guozheng Xu, Siyuan You, Ke Liu, Li Li, Jian Yao
+>
+>IEEE Geoscience and Remote Sensing Letters, 2025.
 
 ## Contact:
 Guozheng Xu (xugzh96_0508@whu.edu.cn)
